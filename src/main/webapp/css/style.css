@@ -1,0 +1,151 @@
+/* Arquivo style.css */
+
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+.content {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto; /* centraliza */
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-container label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.form-container input,
+.form-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.button, .logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover, .logout-button:hover {
+    background-color: #218838;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.success-message {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: green;
+}
+
+/* Estilo para o título principal */
+.content h1 {
+    font-size: 32px;      /* Título maior */
+    margin-top: 20px;     /* Espaço no topo */
+    margin-bottom: 10px;  /* Espaço entre o título e o parágrafo */
+    text-align: center;   /* Centraliza o título */
+}
+
+/* Estilo para o parágrafo principal */
+.content p {
+    font-size: 18px;       /* Fonte um pouco maior */
+    margin: 20px 40px;     /* Espaço em cima/baixo e maior nas laterais */
+    line-height: 1.6;      /* Altura da linha para melhor leitura */
+    text-align: center;    /* Também centraliza o texto */
+}
+
