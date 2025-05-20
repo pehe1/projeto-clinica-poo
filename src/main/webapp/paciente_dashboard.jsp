@@ -12,11 +12,11 @@
     <!-- Menu de Navegação -->
     <div class="navbar">
         <div class="nav-links">
-            <a href="paciente_dashboard">Home</a>
-            <a href="agendarConsulta">Agendamento de Consultas</a>
-            <a href="#">Minha Agenda</a>
-            <a href="#">Meu Cadastro</a>
-            <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a>
+            <a href="paciente_dashboard">Home</a> <!-- Link para o painel do paciente -->
+            <a href="agendarConsulta">Agendamento de Consultas</a> <!-- Link para agendamento -->
+            <a href="#">Minha Agenda</a> <!-- Link para a agenda do paciente -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+            <a href="meuCadastro">Meu Cadastro</a> <!-- Link para a nova funcionalidade -->                                                                                                         
+            <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a> <!-- Link para logout -->
         </div>
     </div>
 

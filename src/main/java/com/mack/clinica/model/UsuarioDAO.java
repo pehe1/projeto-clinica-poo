@@ -1,43 +1,40 @@
 package com.mack.clinica.model;
 
 import com.mack.clinica.util.DatabaseConnection;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import com.mack.clinica.model.Usuario;
 
 public class UsuarioDAO {
 
-    /**
-     * Consulta o usuário pelo email e senha no banco.
-     * @param email Email do usuário.
-     * @param senha Senha do usuário.
-     * @param realPathBase Caminho real da aplicação para localizar o banco.
-     * @return Objeto Usuario encontrado ou null se não encontrado.
-     */
-    public static Usuario buscarUsuario(String email, String senha, String realPathBase) {
-        try (Connection conn = DatabaseConnection.getConnection(realPathBase)) {
-            String sql = "SELECT id, nome, tipo FROM usuarios WHERE email = ? AND senha = ?";
-            PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, email);
-            stmt.setString(2, senha);
+    //Método para buscar os dados do paciente pelo ID
+    public static Usuario buscarPacientePorId(int id, String realPathBase) {
+        //Consulta SQL para buscar os dados do paciente
+        String sql = "SELECT id, nome, email, celular, cpf FROM usuarios WHERE id = ? AND tipo = 'paciente'";
+        Usuario paciente = null;
 
-            ResultSet rs = stmt.executeQuery();
+        try (Connection conn = DatabaseConnection.getConnection(realPathBase); // Conexão com o banco
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            if (rs.next()) {
-                // Se encontrou o usuário, cria um objeto Usuario
-                Usuario usuario = new Usuario();
-                usuario.setId(rs.getInt("id"));
-                usuario.setNome(rs.getString("nome"));
-                usuario.setTipo(rs.getString("tipo"));
-                return usuario;
+            stmt.setInt(1, id); //Define o ID do paciente na consulta
+            try (ResultSet rs = stmt.executeQuery()) { //Executa a consulta
+                if (rs.next()) { //Verifica se há resultados
+                    //Preenche o objeto "Usuario" com os dados do paciente
+                    paciente = new Usuario();
+                    paciente.setId(rs.getInt("id"));
+                    paciente.setNome(rs.getString("nome"));
+                    paciente.setEmail(rs.getString("email"));
+                    paciente.setCelular(rs.getString("celular"));
+                    paciente.setCpf(rs.getString("cpf"));
+                }
             }
-
-        } catch (SQLException e) {
+        } catch (SQLException e) { //Trata erros de SQL
             e.printStackTrace();
-            throw new RuntimeException("Erro ao buscar usuário no banco de dados.", e);
+            throw new RuntimeException("Erro ao buscar os dados do paciente.", e);
         }
-        return null;
+
+        return paciente; //Retorna o objeto "Usuario" preenchido ou null
     }
 }
