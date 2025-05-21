@@ -86,7 +86,9 @@ clinica/
 ✔️ Agendamento e autenticação já implementados  
 ✔️ Dashboards distintos por tipo de usuário  
 ✔️ Prontuário estrutural criado (em fase inicial)
+
 ✔️ Visualização de dados cadastrais
+
 ✔️ Listagem de consultas agendadas
 ---
 
