@@ -1,10 +1,14 @@
+com/mack/clinica/controller/PacienteDashboardServlet.class
+com/mack/clinica/controller/LogoutServlet.class
+com/mack/clinica/controller/LoginActionServlet.class
 com/mack/clinica/controller/MeuCadastroServlet.class
 com/mack/clinica/controller/MinhaAgendaServlet.class
 com/mack/clinica/controller/AdminDashboardServlet.class
+com/mack/clinica/model/AgendarConsultaDAO.class
+com/mack/clinica/model/Consulta.class
+com/mack/clinica/controller/LoginServlet.class
 com/mack/clinica/model/UsuarioDAO.class
 com/mack/clinica/util/DatabaseConnection.class
 com/mack/clinica/controller/AgendarConsultaServlet.class
 com/mack/clinica/model/ConsultaDAO.class
 com/mack/clinica/model/Usuario.class
-com/mack/clinica/model/AgendarConsultaDAO.class
-com/mack/clinica/model/Consulta.class
