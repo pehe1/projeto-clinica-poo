@@ -10,7 +10,6 @@ Projeto final da disciplina de **Programação Orientada a Objetos com Java** �
 Desenvolvido por alunos de Engenharia da Computação
 
 ---
-james.brown@soul.com
 ## 📌 Descrição
 
 Este sistema foi desenvolvido para atender clínicas e consultórios médicos, oferecendo uma plataforma web de agendamento e gestão de consultas. Pacientes podem visualizar seu histórico e dados cadastrais, enquanto profissionais da saúde e administradores têm acesso a funcionalidades específicas para controle de atendimentos, prontuários e gerenciamento de usuários.
