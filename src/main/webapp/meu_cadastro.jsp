@@ -14,6 +14,7 @@
         <div class="nav-links">
             <a href="paciente_dashboard">Home</a> <!-- Link para o painel do paciente -->
             <a href="agendarConsulta">Agendar Consulta</a> <!-- Link para agendamento de consultas -->
+            <a href="minhaAgenda">Minha Agenda</a> <!--Link para a agenda de consultas do paciente--> 
             <a href="meuCadastro">Meu Cadastro</a> <!-- Link para a página atual -->
             <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a> <!-- Link para logout -->
         </div>
@@ -28,7 +29,7 @@
             if (paciente != null) { //Verifica se o objeto não é nulo
         %>
             <!-- Exibe os dados do paciente em uma tabela -->
-            <table border="1" class="table">
+            <table class="styled-table">
                 <tr>
                     <th>Nome</th>
                     <td><%= paciente.getNome() %></td> <!-- Exibe o nome do paciente -->

@@ -38,6 +38,51 @@ public class ConsultaDAO {
             throw new RuntimeException("Erro ao buscar consultas do paciente.", e);
         }
 
-        return consultas; // Retorna a lista de consultas
+        return consultas; //Retorna a lista de consultas
     }
+
+    
+    public static List<Consulta> buscarConsultasFiltradas(String paciente, String medico, String data, String realPathBase) {
+        List<Consulta> consultas = new ArrayList<>();
+        StringBuilder sql = new StringBuilder(
+            "SELECT c.data_hora, c.status, u1.nome AS paciente_nome, u2.nome AS medico_nome " +
+            "FROM consultas c " +
+            "JOIN usuarios u1 ON c.paciente_id = u1.id " +
+            "JOIN usuarios u2 ON c.profissional_id = u2.id WHERE 1=1"
+        );
+        List<Object> params = new ArrayList<>();
+        if (paciente != null && !paciente.isEmpty()) {
+            sql.append(" AND u1.nome LIKE ?");
+            params.add("%" + paciente + "%");
+        }
+        if (medico != null && !medico.isEmpty()) {
+            sql.append(" AND u2.nome LIKE ?");
+            params.add("%" + medico + "%");
+        }
+        if (data != null && !data.isEmpty()) {
+            sql.append(" AND date(c.data_hora) = ?");
+            params.add(data);
+        }
+        try (Connection conn = DatabaseConnection.getConnection(realPathBase);
+            PreparedStatement stmt = conn.prepareStatement(sql.toString())) {
+            for (int i = 0; i < params.size(); i++) {
+                stmt.setObject(i + 1, params.get(i));
+            }
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    Consulta consulta = new Consulta();
+                    consulta.setDataHora(rs.getString("data_hora"));
+                    consulta.setStatus(rs.getString("status"));
+                    consulta.setPacienteNome(rs.getString("paciente_nome"));
+                    consulta.setMedicoNome(rs.getString("medico_nome"));
+                    consultas.add(consulta);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar consultas filtradas.", e);
+        }
+        return consultas;
+    }
+
 }

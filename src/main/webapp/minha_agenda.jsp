@@ -24,7 +24,7 @@
     <!-- Conteúdo principal -->
     <div class="content">
         <h1>Minha Agenda</h1>
-        <table border="1" class="table">
+        <table class="styled-table">
             <thead>
                 <tr>
                     <th>Data e Hora</th>

@@ -4,6 +4,7 @@ public class Consulta {
     private String dataHora;
     private String status;
     private String medicoNome;
+    private String pacienteNome;
 
     // Getters e Setters
     public String getDataHora() {
@@ -28,5 +29,13 @@ public class Consulta {
 
     public void setMedicoNome(String medicoNome) {
         this.medicoNome = medicoNome;
+    }
+    
+    public String getPacienteNome(){
+        return pacienteNome;
+    }
+
+    public void setPacienteNome(String pacienteNome){
+        this.pacienteNome = pacienteNome;
     }
 }

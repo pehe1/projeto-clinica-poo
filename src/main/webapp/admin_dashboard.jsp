@@ -13,10 +13,10 @@
     <div class="navbar">
         <div class="nav-links">
             <a href="admin_dashboard">Home</a>
-            <a href="#">Cadastro de Pacientes</a>
+            <a href="paciente?action=list">Cadastro de Pacientes</a>
             <a href="#">Cadastro de Médicos</a>
-            <a href="#">Consultar Agenda</a>
-            <a href="#">Ficha Clínica</a>
+            <a href="consultarAgenda">Consultar Agenda</a>
+            <a href="fichaClinica">Ficha Clínica</a>
             <a href="${pageContext.request.contextPath}/logout" class="logout-link">Logout</a>
         </div>
     </div>
@@ -24,7 +24,7 @@
     <!-- Conteúdo principal -->
     <div class="content">
         <h1>Painel do Administrador</h1>
-        <p>Bem-vindo ao painel administrativo. Aqui você poderá gerenciar pacientes e consultas.</p>
+        <p>Bem-vindo ao painel administrativo. Aqui você poderá gerenciar pacientes, médicos e consultas.</p>
     </div>
 
 </body>
