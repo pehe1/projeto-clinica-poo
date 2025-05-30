@@ -8,10 +8,13 @@ com/mack/clinica/model/PacienteDAO.class
 com/mack/clinica/model/FichaClinica.class
 com/mack/clinica/controller/AdminDashboardServlet.class
 com/mack/clinica/controller/ConsultarAgendaServlet.class
+com/mack/clinica/model/Medico.class
 com/mack/clinica/model/AgendarConsultaDAO.class
 com/mack/clinica/model/Consulta.class
 com/mack/clinica/model/FichaClinicaDAO.class
+com/mack/clinica/controller/MedicoServlet.class
 com/mack/clinica/controller/FichaClinicaServlet.class
+com/mack/clinica/model/MedicoDAO.class
 com/mack/clinica/controller/LoginServlet.class
 com/mack/clinica/model/UsuarioDAO.class
 com/mack/clinica/util/DatabaseConnection.class
