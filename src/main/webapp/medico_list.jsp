@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de Médicos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <div class="navbar">
