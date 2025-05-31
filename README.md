@@ -82,10 +82,10 @@ clinica/
 
 ## ✅ Status
 
-✔️ Agendamento e autenticação já implementados  
-✔️ Dashboards distintos por tipo de usuário  
-✔️ Prontuário estrutural criado (em fase inicial)  
-✔️ Visualização de dados cadastrais concluída  
+✔️ Agendamento e autenticação já implementados
+✔️ Dashboards distintos por tipo de usuário
+✔️ Prontuário estrutural criado (em fase inicial)
+✔️ Visualização de dados cadastrais concluída
 ✔️ Listagem de consultas agendadas concluída
 ✔️ Formulário de cadastro de paciente criado (CRUD Pacientes)
 ✔️ Página de listagem de pacientes criada
