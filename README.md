@@ -87,15 +87,29 @@ clinica/
 ✔️ Prontuário estrutural criado (em fase inicial)  
 ✔️ Visualização de dados cadastrais concluída  
 ✔️ Listagem de consultas agendadas concluída
+✔️ Formulário de cadastro de paciente criado (CRUD Pacientes)
+✔️ Página de listagem de pacientes criada
+✔️ Funcionalidade de edição e exclusão de pacientes implementada
+✔️ PacienteDAO criado com métodos: create, read, update, delete
+✔️ Validação de dados no formulário de pacientes (CPF, e-mail, etc.) implementada
+✔️ Formulário de cadastro de médico criado (CRUD Médicos)
+✔️ Página de listagem de médicos criada
+✔️ Funcionalidade de edição e exclusão de médicos implementada
+✔️ MedicoDAO criado com métodos: create, read, update, delete
+✔️ Validação básica de campos no formulário de médicos (nome, especialidade) implementada
+✔️ Página “Consultar Agenda” criada com filtros por paciente, médico ou data
+✔️ DAO para consultas filtradas criado e funcional
+✔️ Estrutura inicial da Ficha Clínica criada (anotações e prescrições)
+✔️ Apenas estrutura visual da Ficha Clínica pronta (não salva no banco ainda)
 
 ---
 
 ## 👥 Integrantes
 
-- Danilo — [LinkedIn](https://www.linkedin.com/in/danilomoreiraalmeida/)
-- Miqueias — [LinkedIn](https://www.linkedin.com/in/miqueiassaldanha/)
-- Pedro — [LinkedIn](https://www.linkedin.com/in/pedrocavalcantebarrense/)
-- Thiago — [LinkedIn](https://www.linkedin.com/in/thiago-scaff-809b23242/)
+- Danilo — [LinkedIn](https://www.linkedin.com/in/danilomoreiraalmeida/) - [GitHub](https://github.com/Danxous)
+- Miqueias — [LinkedIn](https://www.linkedin.com/in/miqueiassaldanha/) - [GitHub](https://github.com/devmiqsaldh)
+- Pedro — [LinkedIn](https://www.linkedin.com/in/pedrocavalcantebarrense/) - [GitHub](https://github.com/pehe1)
+- Thiago — [LinkedIn](https://www.linkedin.com/in/thiago-scaff-809b23242/) - [GitHub](https://github.com/ThiagoScaff11)
 ---
 
 ## 📘 Orientador
